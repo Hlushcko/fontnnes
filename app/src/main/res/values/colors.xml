@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="NexTurn">#FFFFFF</color>>
+    <color name="Color_login">#3C4350</color>
+    <color name="Color_text1">#B3696D6F</color>
+    <color name="bacroundColor1">#f7f7f8</color>
+    <color name="HintName">#b3bdc2</color>
+    <color name="EmailColor">#696d6f</color>
+    <color name="ColorButton">#06bebd</color>
+
+    <color name="Standart_text_color">#616060</color>
+    <color name="Hint_standart_color">#8C8C8C</color>
+    <color name="BordColor">#CB5EFF</color>
+    <color name="Forgot_passwords">#7E7E7E</color>
+    <color name="Button_color">#D680FF</color>
+</resources>

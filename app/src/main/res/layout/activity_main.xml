@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/rectangle_1"
+    >
+
+    <TextView
+        android:id="@+id/Logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poiret_one"
+        android:text="@string/Logo"
+        android:textColor="@color/NexTurn"
+        android:textSize="36sp" />
+
+    <EditText
+        android:id="@+id/Email"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/Logo"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/textview_custom"
+        android:fontFamily="@font/raleway"
+        android:hint="@string/hint_email"
+        android:textColor="@color/Standart_text_color"
+        android:textColorHint="@color/Hint_standart_color"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:drawableStart="@drawable/ic_baseline_mail_outline_24"
+        android:paddingStart="20dp"
+        android:paddingEnd="40dp"
+        android:drawablePadding="10dp"/>
+
+    <EditText
+        android:id="@+id/Password"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/Email"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textview_custom"
+        android:fontFamily="@font/raleway"
+        android:hint="@string/password_login"
+        android:textColor="@color/Standart_text_color"
+        android:textColorHint="@color/Hint_standart_color"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:maxLength="16"
+        android:drawableStart="@drawable/ic_outline_lock_24"
+        android:paddingStart="20dp"
+        android:paddingEnd="40dp"
+        android:drawablePadding="10dp"
+        />
+
+    <TextView
+        android:id="@+id/Forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Password"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="190dp"
+        android:fontFamily="@font/raleway"
+        android:textColor="@color/Forgot_passwords"
+        android:text="@string/Forgot_password"
+        android:textSize="12sp"/>
+
+    <Button
+        android:id="@+id/Login_password"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/Forgot_password"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/raleway"
+        android:text="@string/Login"
+        android:textSize="18sp"
+        android:textColor="@color/NexTurn"
+        android:textAllCaps="false"
+        android:background="@drawable/custom_button"
+        android:onClick="LogIn"
+        />
+
+    <TextView
+        android:id="@+id/Create_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Login_password"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/raleway"
+        android:textColor="@color/Forgot_passwords"
+        android:text="@string/Register_lint"
+        android:textSize="12sp"
+        android:onClick="Registers"
+        />
+
+
+</RelativeLayout>

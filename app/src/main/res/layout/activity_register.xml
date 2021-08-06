@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register_activity"
+    android:background="@drawable/rectangle_1"
+    >
+
+
+    <Button
+        android:id="@+id/Back"
+        android:layout_width="20dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_back"
+        android:onClick="LogIn"
+        />
+
+    <TextView
+        android:id="@+id/Logo"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="36sp"
+        android:fontFamily="@font/poiret_one"
+        android:text="@string/Logo"
+        android:textColor="@color/NexTurn"
+        />
+
+
+    <EditText
+        android:id="@+id/Text_email"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/Logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/textview_custom"
+        android:fontFamily="@font/raleway"
+        android:textColorHint="@color/Hint_standart_color"
+        android:textColor="@color/Standart_text_color"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:hint="@string/hint_email"
+        android:drawableStart="@drawable/ic_baseline_mail_outline_24"
+        android:paddingStart="20dp"
+        android:paddingEnd="40dp"
+        android:drawablePadding="10dp"
+        />
+
+    <EditText
+        android:id="@+id/Text_password"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/Text_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:background="@drawable/textview_custom"
+        android:fontFamily="@font/raleway"
+        android:textColorHint="@color/Hint_standart_color"
+        android:textColor="@color/Standart_text_color"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:hint="@string/password_login"
+        android:drawableStart="@drawable/ic_outline_lock_24"
+        android:paddingStart="20dp"
+        android:paddingEnd="40dp"
+        android:drawablePadding="10dp"
+        android:maxLength="16"
+        />
+
+    <EditText
+        android:id="@+id/Confirm_password"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/Text_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:background="@drawable/textview_custom"
+        android:fontFamily="@font/raleway"
+        android:textColorHint="@color/Hint_standart_color"
+        android:textColor="@color/Standart_text_color"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:hint="@string/Confirm_password"
+        android:drawableStart="@drawable/ic_outline_lock_24"
+        android:paddingStart="20dp"
+        android:paddingEnd="40dp"
+        android:drawablePadding="10dp"
+        android:maxLength="16"
+        />
+
+    <Button
+        android:id="@+id/Registration"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/Confirm_password"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/custom_button"
+        android:text="@string/Registration"
+        android:textColor="@color/NexTurn"
+        android:textAllCaps="false"
+        android:fontFamily="@font/raleway"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/Have_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Registration"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="12sp"
+        android:fontFamily="@font/raleway"
+        android:text="@string/Back_Login"
+        android:textColor="@color/Standart_text_color"
+        android:onClick="LogIn"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Weryfication_register"
+    android:background="@drawable/rectangle_1">
+
+
+    <Button
+        android:id="@+id/Back"
+        android:layout_width="20dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_back"
+        android:onClick="BackRegister"
+        />
+
+    <TextView
+        android:id="@+id/Logo"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="36sp"
+        android:fontFamily="@font/poiret_one"
+        android:text="@string/Logo"
+        android:textColor="@color/NexTurn" />
+
+    <TextView
+        android:id="@+id/Message_weryfication"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/Logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/raleway"
+        android:text="@string/Message_weryfication"
+        android:textAlignment="center"
+        android:textColor="@color/NexTurn"
+        android:textSize="18sp"
+        />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_below="@+id/Message_weryfication"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/textview_custom"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/code"
+        android:textAlignment="center"
+        android:fontFamily="@font/raleway"
+        android:textColor="@color/Standart_text_color"
+        android:textColorHint="@color/Hint_standart_color"
+        android:textSize="18sp"
+        android:drawableStart="@drawable/ic_outline_lock_24"
+        android:paddingStart="20dp"
+        android:paddingEnd="40dp"
+        android:drawablePadding="10dp"
+        android:maxLength="16"
+        />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="@string/confirm_code"
+        android:layout_below="@+id/editTextNumber"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:background="@drawable/custom_button"
+        android:textColor="@color/NexTurn"
+        android:fontFamily="@font/raleway"
+        android:textSize="18sp"
+        />
+
+
+</RelativeLayout>

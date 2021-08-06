@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "308984053224",
+    "firebase_url": "https://fontnnes-34bb2-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "fontnnes-34bb2",
+    "storage_bucket": "fontnnes-34bb2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308984053224:android:32a752c989900c7288f85d",
+        "android_client_info": {
+          "package_name": "com.example.fontnnes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308984053224-bcfeanotpblnd868qoflkl5nq8vd6avd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCo3ypibN9s0jaoIf6k7TGyhCjliocXhB4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308984053224-bcfeanotpblnd868qoflkl5nq8vd6avd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
