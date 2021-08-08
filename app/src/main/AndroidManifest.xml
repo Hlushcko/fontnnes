@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.test349">
+    package="com.example.fontnnes">
 
     <application
         android:allowBackup="true"
@@ -9,14 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Test349">
-        <activity android:name="com.example.test349.Account"></activity>
-        <activity android:name="com.example.test349.Search" />
-        <activity android:name="com.example.test349.Message" />
-        <activity android:name="com.example.test349.Home" />
-        <activity android:name="com.example.test349.Weryfication_register" />
-        <activity android:name="com.example.test349.Register_activity" />
+        <activity android:name="com.example.fontnnes.Account"></activity>
+        <activity android:name="com.example.fontnnes.Search" />
+        <activity android:name="com.example.fontnnes.Message" />
+        <activity android:name="com.example.fontnnes.Home" />
+        <activity android:name="com.example.fontnnes.Weryfication_register" />
+        <activity android:name="com.example.fontnnes.Register_activity" />
         <activity
-            android:name="com.example.test349.MainActivity"
+            android:name="com.example.fontnnes.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

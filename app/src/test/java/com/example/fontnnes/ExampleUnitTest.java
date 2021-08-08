@@ -1,4 +1,4 @@
-package com.example.test349;
+package com.example.fontnnes;
 
 import org.junit.Test;
 
