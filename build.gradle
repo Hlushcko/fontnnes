@@ -12,9 +12,9 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
-
 allprojects {
     repositories {
+        apply plugin: 'com.google.gms.google-services'
         google()
         mavenCentral()
         jcenter() // Warning: this repository is going to shut down soon

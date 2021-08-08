@@ -113,6 +113,7 @@
         android:textAllCaps="false"
         android:fontFamily="@font/raleway"
         android:textSize="18sp"
+        android:onClick="Registration"
         />
 
     <TextView

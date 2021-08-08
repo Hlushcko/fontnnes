@@ -4,10 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.view.View;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.google.firebase.FirebaseApp;
 
 public class MainActivity extends AppCompatActivity {
+
+
+    private TextView email, password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +27,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void LogIn(View view) {
 
-        DatabaseLogic DB = new DatabaseLogic();
-        //DB.PushInfoUser();
+        email = findViewById(R.id.Email);
+        password = findViewById(R.id.Password);
+
+        Intent button = new Intent(this, Home.class);
 
     }
 }
