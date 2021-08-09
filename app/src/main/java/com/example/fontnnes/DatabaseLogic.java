@@ -16,6 +16,10 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import org.jetbrains.annotations.NotNull;
+
+import java.util.Objects;
+
 
 public class DatabaseLogic extends AppCompatActivity {
 
@@ -40,24 +44,19 @@ public class DatabaseLogic extends AppCompatActivity {
         }
     }
 
-    public void SingIn(TextView email, TextView password,TextView password_confirm){
+    public void SingUp(String email, String password, String password_confirm){
 
         Boolean email_boolean = Check_null(email);
         Boolean password_boolean = Check_null(password);
-        Boolean confirm_password_boolean = Check_null(password_confirm);
 
-        if (email_boolean & password_boolean & confirm_password_boolean){
+        if ((email_boolean && password_boolean)){
 
-            if(password == password_confirm){
+            if(Objects.equals(password, password_confirm)){
 
-                auth.createUserWithEmailAndPassword(email.getText().toString(), password.getText().toString())
+                auth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-
-                                if(task.isSuccessful()){
-                                    Toast.makeText(getApplication().getApplicationContext(), "Complete", Toast.LENGTH_SHORT).show();
-                                }
+                            public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
 
                             }
                         });
@@ -70,9 +69,9 @@ public class DatabaseLogic extends AppCompatActivity {
         }
     }
 
-    private Boolean Check_null(TextView view){
+    private Boolean Check_null(String check){
 
-        if (TextUtils.isEmpty(view.getText().toString())){
+        if (TextUtils.isEmpty(check)){
             return false;
         } else{
             return true;

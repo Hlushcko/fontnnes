@@ -102,7 +102,7 @@
         android:orientation="horizontal"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/homeBotton"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="40dp"
         >
 
         <Button

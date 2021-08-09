@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         password = findViewById(R.id.Password);
 
         Intent button = new Intent(this, Home.class);
+        startActivity(button);
 
     }
 }
