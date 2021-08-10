@@ -14,6 +14,7 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
     }
 
+
     public void Open_message(View view) {
         Intent button = new Intent(this, Message.class);
         startActivity(button);
