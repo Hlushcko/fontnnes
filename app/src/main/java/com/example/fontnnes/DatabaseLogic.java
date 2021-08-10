@@ -1,5 +1,6 @@
 package com.example.fontnnes;
 
+import android.content.Intent;
 import android.text.TextUtils;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,27 +30,23 @@ public class DatabaseLogic extends AppCompatActivity {
     public void PushInfoUser(String Lname, String Fname, String Date, String Search, String Gender, String Alcohol, String Smocking, String Info){
 
        fontnnesDatabaseUserInfo.push().setValue(new User(Lname, Fname, Date, Search, Gender, Alcohol, Smocking, Info));
+
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-
         FirebaseApp.initializeApp(this);
-
-        FirebaseUser DBuser = auth.getCurrentUser();
-
-        if(DBuser == null){
-            Toast.makeText(this, "user null", Toast.LENGTH_SHORT).show();
-        }
     }
 
-    public void SingUp(String email, String password, String password_confirm){
+
+
+    public void Register(String email, String password, String password_confirm){
 
         Boolean email_boolean = Check_null(email);
         Boolean password_boolean = Check_null(password);
 
-        if ((email_boolean && password_boolean)){
+        if (email_boolean && password_boolean){
 
             if(Objects.equals(password, password_confirm)){
 
@@ -57,25 +54,53 @@ public class DatabaseLogic extends AppCompatActivity {
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
-
+                                Verification();
                             }
-                        });
 
-            }else{
-                Toast.makeText(this, "Password mismatch", Toast.LENGTH_SHORT).show();
+                        });
             }
-        }else{
-            Toast.makeText(this, "Fill in all the fields", Toast.LENGTH_SHORT).show();
         }
     }
 
-    private Boolean Check_null(String check){
 
-        if (TextUtils.isEmpty(check)){
-            return false;
-        } else{
-            return true;
+    public void LogIn(String email, String password){
+        Boolean boolean_email = Check_null(email);
+        Boolean boolean_password = Check_null(password);
+
+        if(boolean_email && boolean_password) {
+            auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull @NotNull Task<AuthResult> task) { }
+            });
         }
+    }
+
+    public void SignOut(){
+        FirebaseAuth.getInstance().signOut();
+    }
+
+    private Boolean Check_null(String check){
+        return !TextUtils.isEmpty(check);
+    }
+
+    private void Verification(){
+        Objects.requireNonNull(auth.getCurrentUser()).sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull @NotNull Task<Void> task) {
+
+            }
+        });
+    }
+
+    public boolean CheckLoginUser(){
+        FirebaseUser user = auth.getCurrentUser();
+        return user != null;
+    }
+
+    public boolean CheckEmailVerification(){
+        FirebaseUser user = auth.getCurrentUser();
+        return Objects.requireNonNull(user).isEmailVerified();
+
     }
 
 
@@ -86,6 +111,7 @@ public class DatabaseLogic extends AppCompatActivity {
         private String lname, fname, date, search, gender, alcohol, smocking, info;
 
         public User(){}
+
         public User(String Lname, String Fname, String Date, String Search, String Gender, String Alcohol, String Smocking, String Info){
 
             lname = Lname;

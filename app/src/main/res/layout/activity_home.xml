@@ -90,6 +90,7 @@
             android:drawableStart="@drawable/ic_error"
             android:paddingLeft="35dp"
             android:paddingRight="35dp"
+            android:onClick="Setting"
             />
 
     </LinearLayout>

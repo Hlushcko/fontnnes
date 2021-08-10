@@ -10,19 +10,18 @@ import com.google.firebase.FirebaseApp;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    DatabaseLogic DB = new DatabaseLogic();
     private TextView email, password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        CheckVerification();
         FirebaseApp.initializeApp(this);
     }
 
     public void Registers(View view) {
-        Intent button = new Intent(this, Register_activity.class);
-        startActivity(button);
+        startActivity(new Intent(this, Register_activity.class));
     }
 
     public void LogIn(View view) {
@@ -30,8 +29,15 @@ public class MainActivity extends AppCompatActivity {
         email = findViewById(R.id.Email);
         password = findViewById(R.id.Password);
 
-        Intent button = new Intent(this, Home.class);
-        startActivity(button);
+        DB.LogIn(email.getText().toString(), password.getText().toString());
+        CheckVerification();
+    }
 
+    private void CheckVerification(){
+        if(DB.CheckLoginUser() && DB.CheckEmailVerification()){
+            startActivity(new Intent(this, Home.class));
+        } else {
+            setContentView(R.layout.activity_main);
+        }
     }
 }

@@ -18,4 +18,8 @@ public class Home extends AppCompatActivity {
         Intent button = new Intent(this, Message.class);
         startActivity(button);
     }
+
+    public void Setting(View view) {
+        startActivity(new Intent(this, Setting.class));
+    }
 }

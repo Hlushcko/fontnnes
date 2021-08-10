@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.FirebaseApp;
 
@@ -33,7 +34,10 @@ public class Register_activity extends AppCompatActivity {
         TextView password = findViewById(R.id.Text_password);
         TextView password_confirm = findViewById(R.id.Confirm_password);
 
-        DL.SingUp(email.getText().toString(), password.getText().toString(), password_confirm.getText().toString());
+        DL.Register(email.getText().toString(), password.getText().toString(), password_confirm.getText().toString());
+        Toast.makeText(getApplicationContext(), "Check you email", Toast.LENGTH_LONG).show();
+        startActivity(new Intent(this, MainActivity.class));
+
     }
 
 
