@@ -71,7 +71,9 @@
         android:fontFamily="@font/raleway"
         android:textColor="@color/Forgot_passwords"
         android:text="@string/Forgot_password"
-        android:textSize="12sp"/>
+        android:textSize="12sp"
+        android:onClick="setPassword"
+        />
 
     <Button
         android:id="@+id/Login_password"

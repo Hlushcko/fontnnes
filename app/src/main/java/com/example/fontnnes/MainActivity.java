@@ -40,4 +40,8 @@ public class MainActivity extends AppCompatActivity {
             setContentView(R.layout.activity_main);
         }
     }
+
+    public void setPassword(View view) {
+        startActivity(new Intent(this, reset_password.class));
+    }
 }

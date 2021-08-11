@@ -75,13 +75,6 @@ public class DatabaseLogic extends AppCompatActivity {
         }
     }
 
-    public void SignOut(){
-        FirebaseAuth.getInstance().signOut();
-    }
-
-    private Boolean Check_null(String check){
-        return !TextUtils.isEmpty(check);
-    }
 
     private void Verification(){
         Objects.requireNonNull(auth.getCurrentUser()).sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -103,7 +96,17 @@ public class DatabaseLogic extends AppCompatActivity {
 
     }
 
+    public void ResetPassword(String email){
+        auth.sendPasswordResetEmail(email);
+    }
 
+    public void SignOut(){
+        FirebaseAuth.getInstance().signOut();
+    }
+
+    private Boolean Check_null(String check){
+        return !TextUtils.isEmpty(check);
+    }
 
 
     private static class User {

@@ -15,4 +15,5 @@
     <string name="confirm_code">Confirm</string>
     <string name="Block">Block</string>
     <string name="Message">Message</string>
+    <string name="Reset_password">Reset</string>
 </resources>
