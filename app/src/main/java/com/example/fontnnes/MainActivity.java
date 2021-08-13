@@ -30,7 +30,10 @@ public class MainActivity extends AppCompatActivity {
         password = findViewById(R.id.Password);
 
         DB.LogIn(email.getText().toString(), password.getText().toString());
-        CheckVerification();
+
+        if(DB.CheckLoginUser()){
+            startActivity(new Intent(this, Home.class));
+        }
     }
 
     private void CheckVerification(){
