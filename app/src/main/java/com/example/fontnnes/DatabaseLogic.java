@@ -26,20 +26,13 @@ public class DatabaseLogic extends AppCompatActivity {
 
     private final DatabaseReference fontnnesDatabaseUserInfo = FirebaseDatabase.getInstance().getReference("User_info");
     private FirebaseAuth auth = FirebaseAuth.getInstance();
-
-    public void PushInfoUser(String Lname, String Fname, String Date, String Search, String Gender, String Alcohol, String Smocking, String Info){
-
-       fontnnesDatabaseUserInfo.push().setValue(new User(Lname, Fname, Date, Search, Gender, Alcohol, Smocking, Info));
-
-    }
+    private static String email, password, password_confirm;
 
     @Override
     protected void onStart() {
         super.onStart();
         FirebaseApp.initializeApp(this);
     }
-
-
 
     public void Register(String email, String password, String password_confirm){
 
@@ -56,8 +49,7 @@ public class DatabaseLogic extends AppCompatActivity {
                             public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
                                 Verification();
                             }
-
-                        });
+               });
             }
         }
     }
@@ -93,8 +85,15 @@ public class DatabaseLogic extends AppCompatActivity {
     public boolean CheckEmailVerification(){
         FirebaseUser user = auth.getCurrentUser();
         return Objects.requireNonNull(user).isEmailVerified();
-
     }
+
+    public void setEmailPasswordPasswordConfirm(String Email, String Password, String Password_confirm){
+        email = Email;
+        password = Password;
+        password_confirm = Password_confirm;
+    }
+
+
 
     public void ResetPassword(String email){
         auth.sendPasswordResetEmail(email);

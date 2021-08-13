@@ -44,8 +44,8 @@
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
-        android:elevation="1dp"
-        />
+        android:elevation="1dp" />
+
     <LinearLayout
 
         android:id="@+id/homeBotton"
@@ -54,7 +54,7 @@
         android:orientation="horizontal"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/Information_account"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         >
 
         <Button
@@ -102,7 +102,7 @@
         android:orientation="horizontal"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/homeBotton"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         >
 
         <Button

@@ -52,6 +52,7 @@
         android:paddingStart="20dp"
         android:paddingEnd="40dp"
         android:drawablePadding="10dp"
+        android:maxLength="64"
         />
 
     <EditText

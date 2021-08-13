@@ -35,7 +35,6 @@ public class Register_activity extends AppCompatActivity {
         TextView password_confirm = findViewById(R.id.Confirm_password);
 
         DL.Register(email.getText().toString(), password.getText().toString(), password_confirm.getText().toString());
-        Toast.makeText(getApplicationContext(), "Check you email", Toast.LENGTH_LONG).show();
         startActivity(new Intent(this, MainActivity.class));
 
     }

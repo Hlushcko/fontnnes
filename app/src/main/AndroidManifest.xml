@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Fontnnes">
-        <activity android:name=".reset_password"></activity>
+        <activity android:name=".reset_password" />
         <activity android:name=".Setting" />
         <activity android:name=".Account" />
         <activity android:name=".Search" />
