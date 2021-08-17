@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Message"
-    android:background="@drawable/rectangle_1">
+    android:background="@drawable/rectangle_1"
+    android:id="@+id/MessageLayoutScroll"
+    >
 
 
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <Button
         android:id="@+id/Back"
@@ -31,24 +36,6 @@
         android:layout_marginTop="10dp"
         />
 
-    <EditText
-        android:id="@+id/Search"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:inputType="textPersonName"
-        android:background="@drawable/textview_custom"
-        android:layout_below="@id/Logo"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"
-        android:drawableStart="@drawable/ic_search"
-        android:padding="10dp"
-        android:paddingStart="20dp"
-        android:paddingEnd="40dp"
-        android:drawablePadding="10dp"
-        android:textColor="@color/Standart_text_color"
-        android:fontFamily="@font/raleway"
-        android:textAlignment="center"
-        />
+    </RelativeLayout>
 
-
-</RelativeLayout>
+</ScrollView>

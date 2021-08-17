@@ -26,6 +26,7 @@ public class reset_password extends AppCompatActivity {
         String gmail = email.getText().toString();
 
         if(!gmail.isEmpty()) {
+            email.setText("");
             DB.ResetPassword(gmail);
             Toast.makeText(this, "Place, check you email " + gmail, Toast.LENGTH_SHORT).show();
         }else{
